@@ -93,3 +93,16 @@ function flipCards() {
     stop = true;
   }
 }
+
+function updateDeckCount() {
+  computerDeckElement.innerText = computerDeck.numberOfCards;
+  playerDeckElement.innerText = playerDeck.numberOfCards;
+}
+
+function isRoundWinner(cardOne, cardTwo) {
+  return CARD_VALUE_MAP[cardOne.value] > CARD_VALUE_MAP[cardTwo.value];
+}
+
+function isGameOver(deck) {
+  return deck.numberOfCards === 0;
+}
